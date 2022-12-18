@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pics Finder</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>Image Search Pixabay</title>
   </head>
+
   <body>
-    <include src="./partials/svg-icons.html"></include>
-    <include src="./partials/form.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/load-more.html"></include>
+    <div class="form-container">
+      <div class="wrapper">
+        <a class="wrapper-link" href="https://pixabay.com/illustrations/"
+          >Pixabay</a
+        >
+      </div>
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Пошук зображення"
+        />
+        <button type="submit" class="search-btn">Пошук</button>
+      </form>
+    </div>
+
+    <div class="gallery">
+      <!-- Картка зображення -->
+    </div>
+
+    <div class="btn-container">
+      <button type="button" class="load-more is-hidden">Шукати далі</button>
+    </div>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>
